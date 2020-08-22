@@ -2,7 +2,7 @@
   "name": "gatsby-bulma-quickstart",
   "description": "A Project to bootstrap your next Gatsby + Bulma site.",
   "version": "1.10.3",
-  "author": "Aman Mittal <amandeepmittal@live.com>",
+  "author": "Tyler Newman",
   "dependencies": {
     "bulma": "^0.9.0",
     "gatsby": "^2.24.2",
@@ -20,7 +20,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
-    "react-icons": "^3.10.0"
+    "react-icons": "^3.10.0",
+    "standard": "^14.3.4"
   },
   "keywords": [
     "gatsby",
@@ -36,9 +37,6 @@
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "devDependencies": {
-    "prettier": "^1.14.2"
   },
   "repository": {
     "type": "git",
