@@ -9,8 +9,8 @@ const numberOfProducts = productData.length
 const numberOfRows = Math.ceil(numberOfProducts / numberOfColumns)
 const columns = chunk(productData, numberOfRows) // products grouped into array of four
 
-const ProductCard = ({ title, imgSrc, key }) => (
-  <div className='flat-card' key={key}>
+const ProductCard = ({ title, imgSrc, key, price }) => (
+  <div className='flat-card' key={key} style={{ padding: '1em .5em 2em' }}>
     {/* Product zoomable image */}
     <div className='image'>
       <img src={imgSrc} alt />
@@ -20,7 +20,7 @@ const ProductCard = ({ title, imgSrc, key }) => (
       <a href='product.html'>
         <h3 className='product-name'>{title}</h3>
       </a>
-      <p className='product-price'>45,00</p>
+      <p className='product-price'>{price}</p>
     </div>
     {/* Product actions */}
     <div className='actions'>
