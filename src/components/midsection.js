@@ -20,7 +20,6 @@ const ProductCard = ({ title, imgSrc, key }) => (
       <a href='product.html'>
         <h3 className='product-name'>{title}</h3>
       </a>
-      <p className='product-description'>Lorem ipsum sit dolor amet</p>
       <p className='product-price'>45,00</p>
     </div>
     {/* Product actions */}
@@ -55,7 +54,6 @@ const Midsection = () => (
   <div>
     <section className='section'>
       <div className='container has-text-centered py-4'>
-        <h2 className='title mb-6'>Products</h2>
         <div className='columns'>
           {console.log(columns)}
           {columns.map((column, key) => (
