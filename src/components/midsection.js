@@ -11,7 +11,6 @@ const GridContainer = ({ children }) => (
 const Grid = ({ children }) => (
   <div className='columns is-multiline'>{children}</div>
 )
-
 const Column = ({ children, key }) => (
   <div className='column is-3-desktop is-4-tablet ' key={key}>
     {children}
