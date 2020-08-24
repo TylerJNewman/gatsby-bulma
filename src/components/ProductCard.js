@@ -29,7 +29,7 @@ const ProductCard = ({ title, imgSrc, key, price }) => (
   <div className='flat-card' style={{ padding: '1em .5em 2em' }}>
     {/* Product zoomable image */}
     <div className='image'>
-      <img src={imgSrc} alt />
+      <img src={imgSrc} alt={title} />
     </div>
     {/* Product meta */}
     <div className='product-info has-text-centered'>

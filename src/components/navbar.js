@@ -1,11 +1,21 @@
-import React from 'react';
+import React from 'react'
+import Logo from '../images/Ariana-Grande.png'
+import './style.scss'
 
 const Navbar = () => (
   <nav className='navbar'>
     <div className='container'>
-      <div className='navbar-brand is-active'>
-        <a href='#' className='navbar-item'>
-          Pied Piper
+      <div className='navbar-brand'>
+        <a className='navbar-item' href='#' style={{ maxHeight: '38px' }}>
+          <img
+            style={{
+              padding: 6,
+              maxHeight: 39,
+              display: 'block'
+            }}
+            src={Logo}
+            alt='Logo'
+          />
         </a>
         <a
           role='button'
@@ -21,32 +31,35 @@ const Navbar = () => (
       <div className='navbar-menu'>
         <div className='navbar-end'>
           <a href='#' className='navbar-item'>
-            Features
+            help & support
           </a>
           <a href='#' className='navbar-item'>
-            Enterprise
+            delivery
           </a>
           <a href='#' className='navbar-item'>
-            Support
+            terms & conditions
           </a>
           <div className='navbar-item has-dropdown is-hoverable'>
-            <a className='navbar-link'>ICO</a>
+            <a className='navbar-link'>about</a>
             <div className='navbar-dropdown'>
               <a href='#' className='navbar-item navbar-item-dropdown'>
-                Whitepaper
+                me
               </a>
               <a href='#' className='navbar-item navbar-item-dropdown'>
-                Token
+                company
               </a>
             </div>
           </div>
+          <a href='#' className='navbar-item'>
+            login
+          </a>
         </div>
         <div>
-          <div className='navbar-item'>
+          {/* <div className='navbar-item'>
             <a href='#' className='button is-primary'>
               Sign up
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

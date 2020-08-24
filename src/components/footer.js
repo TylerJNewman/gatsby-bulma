@@ -2,6 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import './style.scss'
 import Emoji from './Emoji'
+import footerLinks from './footerLinks'
 
 const Footer = () => (
   <StaticQuery
@@ -24,18 +25,11 @@ const Footer = () => (
           <div className='columns is-centered'>
             <div className='column is-8'>
               <div className='level'>
-                <a href='#' className='level-item'>
-                  Features
-                </a>
-                <a href='#' className='level-item'>
-                  Enterprise
-                </a>
-                <a href='#' className='level-item'>
-                  Support
-                </a>
-                <a href='#' className='level-item'>
-                  ICO
-                </a>
+                {footerLinks.map(({ title, href }, key) => (
+                  <a href={href} className='level-item' key={key}>
+                    {title}
+                  </a>
+                ))}
               </div>
             </div>
           </div>

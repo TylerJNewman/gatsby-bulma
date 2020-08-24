@@ -1,9 +1,12 @@
 // Importing variables
-@import './variables.scss';
+@import "./variables.scss";
 
 // Importing Bulma from node_modules
-@import '~bulma/bulma.sass';
+@import "~bulma/bulma.sass";
 
+/* 
+  helpers start
+ */
 
 .center {
   display: flex;
@@ -11,11 +14,53 @@
   align-items: center;
 }
 
+/* 
+  helpers  end
+ */
+
+/* 
+  navbar start
+ */
+
+.navbar-brand {
+  align-items: center;
+}
+
+.navbar {
+  padding: 0.9em 0;
+}
+
+/* 
+  navbar end
+ */
+
+/* 
+  products start
+ */
+
+h3.product-name {
+  color: black;
+}
+
+h3.product-name:hover {
+  color: #ad949e;
+}
+
+/* 
+  products end
+ */
+
+/* 
+  footer start
+ */
+
 .footer {
   background: white;
   display: flex;
   padding: 1.5rem 1.5rem;
   line-height: 1.5rem;
+  font-size: 0.9em;
+  text-align: center;
 
   a {
     color: black;
@@ -24,4 +69,14 @@
   a:hover {
     color: $secondary-color;
   }
+
+  li a {
+    padding: 0.55555555555556em 1em;
+    display: block;
+    line-height: 1.6;
+  }
 }
+
+/* 
+  footer end
+ */

@@ -10,8 +10,8 @@ const GridContainer = ({ children }) => (
 const Grid = ({ children }) => (
   <div className='columns is-multiline pb-3'>{children}</div>
 )
-const Column = ({ children, key }) => (
-  <div className='column is-3-desktop is-4-tablet ' key={key}>
+const Column = ({ children }) => (
+  <div className='column is-3-desktop is-4-tablet '>
     {children}
   </div>
 )
