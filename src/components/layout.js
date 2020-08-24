@@ -6,13 +6,22 @@ import Header from './Header'
 import Midsection from './Midsection'
 import Footer from './Footer'
 
+const Container = ({ children }) => (
+  <div className='container is-fluid'>{children}</div>
+)
+const Main = ({ children }) => (
+  <main style={{ paddingBottom: '4%' }}>{children}</main>
+)
+
 const Layout = ({ children }) => (
-  <div className='container is-fluid'>
+  <Container>
     <Helmet />
-    <Header />
-    <Midsection />
+    <Main>
+      <Header />
+      <Midsection />
+    </Main>
     <Footer />
-  </div>
+  </Container>
 )
 
 export default Layout
