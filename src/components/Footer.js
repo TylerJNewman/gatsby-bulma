@@ -10,11 +10,9 @@ const Footer = () => (
       query SocialQuery {
         site {
           siteMetadata {
-            gatsby
-            bulma
             twitter
-            medium
-            github
+            instagram
+            facebook
           }
         }
       }
