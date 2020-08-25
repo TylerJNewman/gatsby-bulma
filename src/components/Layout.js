@@ -7,10 +7,10 @@ import Midsection from './Midsection'
 import Footer from './Footer'
 
 const Container = ({ children }) => (
-  <div className='container is-fluid'>{children}</div>
+  <div className='container'>{children}</div>
 )
 const Main = ({ children }) => (
-  <main style={{ paddingBottom: '4%' }}>{children}</main>
+  <main style={{ paddingBottom: '4%', maxWidth: 1270 }}>{children}</main>
 )
 
 const Layout = ({ children }) => (

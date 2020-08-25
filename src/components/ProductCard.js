@@ -26,7 +26,7 @@ import React from 'react'
 // }
 
 const ProductCard = ({ title, imgSrc, key, price }) => (
-  <div className='flat-card' style={{ padding: '1em .5em 2em' }}>
+  <div className='flat-card' style={{ padding: '1em .5em 2em', maxWidth: 284 }}>
     {/* Product zoomable image */}
     <div className='image'>
       <img src={imgSrc} alt={title} />
