@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import './style.scss'
 import Emoji from './Emoji'
-import footerLinks from './footerLinks'
+import footerLinks from './FooterLinks'
 
 const Footer = () => (
   <StaticQuery
