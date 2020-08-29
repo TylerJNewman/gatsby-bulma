@@ -9,9 +9,13 @@ const productStaticQuery = graphql`
       edges {
         node {
           id
-          title
+          name
           price
-          thumbnail
+          image {
+            id
+            sourceUrl
+            altText
+          }
         }
       }
     }
@@ -71,10 +75,10 @@ const Column = ({ children }) => (
 
 const Midsection = ({ data }) => {
   const { allProductsJson, allWpProduct } = data
-  // const productData = allProductsJson.edges.map((obj) => obj.node)
-  // console.log(allWpProduct)
-  const productData = allWpProduct.edges.map((obj) => obj.node)
+  const productData = allProductsJson.edges.map((obj) => obj.node)
   console.log(productData)
+  // const productData = allWpProduct.edges.map((obj) => obj.node)
+  // console.log(productData)
 
   return (
     <Section>

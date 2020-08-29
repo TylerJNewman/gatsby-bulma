@@ -25,11 +25,13 @@ import React from 'react'
 //   )
 // }
 
-const ProductCard = ({ name, image, key, price }) => (
-  <div className='flat-card' style={{ padding: '1em .5em 2em', maxWidth: 284, maxWidth: 178 }}>
+const ProductCard = ({ id, name, image, key, price }) => (
+  <div
+    className='flat-card'
+    style={{ padding: '1em .5em 2em', maxWidth: 284 }}
+  >
     {/* Product zoomable image */}
     <div className='image'>
-      {console.log('thumb', image.sourceUrl)}
       <img src={image.sourceUrl} alt={name} />
     </div>
     {/* Product meta */}

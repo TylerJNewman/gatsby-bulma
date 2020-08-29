@@ -1,5 +1,6 @@
 export default [
   {
+    id: 1,
     name: 'thank you, next lp',
     price: '$25.00',
     image: {
@@ -8,6 +9,7 @@ export default [
     }
   },
   {
+    id: 2,
     name: 'sweetner, double lp',
     price: '$22.00',
     image: {
@@ -16,6 +18,7 @@ export default [
     }
   },
   {
+    id: 3,
     name: 'break up with your gf, crewneck',
     price: '$40.00',
     image: {
@@ -24,6 +27,7 @@ export default [
     }
   },
   {
+    id: 4,
     name: 'no tears left to cry - grey crewneck',
     price: '$40.00',
     image: {
@@ -32,6 +36,7 @@ export default [
     }
   },
   {
+    id: 1,
     name: 'thank you, next lp',
     price: '$25.00',
     image: {
@@ -40,6 +45,7 @@ export default [
     }
   },
   {
+    id: 5,
     name: 'sweetner, double lp',
     price: '$22.00',
     image: {
@@ -48,6 +54,7 @@ export default [
     }
   },
   {
+    id: 6,
     name: 'break up with your gf, crewneck',
     price: '$40.00',
     image: {
@@ -56,6 +63,7 @@ export default [
     }
   },
   {
+    id: 6,
     name: 'no tears left to cry - grey crewneck',
     price: '$40.00',
     image: {
