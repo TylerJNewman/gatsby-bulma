@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.scss'
 import ProductCard from './ProductCard'
-import { StaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const productStaticQuery = graphql`
   {
@@ -73,7 +73,8 @@ const Column = ({ children }) => (
   </div>
 )
 
-const Midsection = ({ data }) => {
+const Midsection = () => {
+  const data = useStaticQuery(productStaticQuery)
   const { allProductsJson, allWpProduct } = data
   const productData = allProductsJson.edges.map((obj) => obj.node)
   console.log(productData)
@@ -95,13 +96,13 @@ const Midsection = ({ data }) => {
   )
 }
 
-export default function MidsectionContainer (props) {
-  return (
-    <StaticQuery
-      query={productStaticQuery}
-      render={(data) => <Midsection data={data} {...props} />}
-    />
-  )
-}
+// export default function MidsectionContainer (props) {
+//   return (
+//     <StaticQuery
+//       query={productStaticQuery}
+//       render={(data) => <Midsection data={data} {...props} />}
+//     />
+//   )
+// }
 
-// export default Midsection
+export default Midsection
