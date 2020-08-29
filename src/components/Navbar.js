@@ -38,7 +38,7 @@ const Navbar = () => {
             <span aria-hidden='true' />
           </a>
         </div>
-        <div className={`navbar-menu ${isActive ? 'is-active' : ''}`} s>
+        <div className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
           <div className='navbar-end'>
             <a href='#' className='navbar-item'>
               help & support
