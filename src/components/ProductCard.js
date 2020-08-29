@@ -26,13 +26,10 @@ import React from 'react'
 // }
 
 const ProductCard = ({ id, name, image, key, price }) => (
-  <div
-    className='flat-card'
-    style={{ padding: '1em .5em 2em', maxWidth: 284 }}
-  >
+  <div className='flat-card' style={{ padding: '1em .5em 2em', maxWidth: 286 }}>
     {/* Product zoomable image */}
     <div className='image'>
-      <img src={image.sourceUrl} alt={name} />
+      <img src={image.sourceUrl} alt={name} style={{ maxHeight: 286 }} />
     </div>
     {/* Product meta */}
     <div className='product-info has-text-centered'>
