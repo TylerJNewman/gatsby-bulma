@@ -15,6 +15,38 @@ const productStaticQuery = graphql`
         }
       }
     }
+    allWpProduct {
+      edges {
+        node {
+          id
+          slug
+          name
+          shortDescription
+          image {
+            id
+            sourceUrl
+            altText
+          }
+          galleryImages {
+            nodes {
+              id
+              sourceUrl
+              altText
+            }
+          }
+          ... on WpSimpleProduct {
+            onSale
+            price
+            regularPrice
+          }
+          ... on WpVariableProduct {
+            onSale
+            price
+            regularPrice
+          }
+        }
+      }
+    }
   }
 `
 
@@ -38,15 +70,18 @@ const Column = ({ children }) => (
 )
 
 const Midsection = ({ data }) => {
-  const { allProductsJson } = data
-  const productData = allProductsJson.edges.map((obj) => obj.node)
+  const { allProductsJson, allWpProduct } = data
+  // const productData = allProductsJson.edges.map((obj) => obj.node)
+  // console.log(allWpProduct)
+  const productData = allWpProduct.edges.map((obj) => obj.node)
   console.log(productData)
+
   return (
     <Section>
       <GridContainer>
         <Grid>
-          {productData.map((product, key) => (
-            <Column key={key}>
+          {productData.map((product) => (
+            <Column key={product.id}>
               <ProductCard {...product} />
             </Column>
           ))}
