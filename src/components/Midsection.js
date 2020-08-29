@@ -1,7 +1,22 @@
 import React from 'react'
 import './style.scss'
-import productData from './productData'
 import ProductCard from './ProductCard'
+import { StaticQuery, graphql } from 'gatsby'
+
+const productStaticQuery = graphql`
+  {
+    allProductsJson {
+      edges {
+        node {
+          id
+          title
+          price
+          thumbnail
+        }
+      }
+    }
+  }
+`
 
 const Section = ({ children }) => <div className='section'>{children}</div>
 const GridContainer = ({ children }) => (
@@ -22,18 +37,32 @@ const Column = ({ children }) => (
   </div>
 )
 
-const Midsection = () => (
-  <Section>
-    <GridContainer>
-      <Grid>
-        {productData.map((products, key) => (
-          <Column key={key}>
-            <ProductCard {...products} />
-          </Column>
-        ))}
-      </Grid>
-    </GridContainer>
-  </Section>
-)
+const Midsection = ({ data }) => {
+  const { allProductsJson } = data
+  const productData = allProductsJson.edges.map((obj) => obj.node)
+  console.log(productData)
+  return (
+    <Section>
+      <GridContainer>
+        <Grid>
+          {productData.map((product, key) => (
+            <Column key={key}>
+              <ProductCard {...product} />
+            </Column>
+          ))}
+        </Grid>
+      </GridContainer>
+    </Section>
+  )
+}
 
-export default Midsection
+export default function MidsectionContainer (props) {
+  return (
+    <StaticQuery
+      query={productStaticQuery}
+      render={(data) => <Midsection data={data} {...props} />}
+    />
+  )
+}
+
+// export default Midsection
