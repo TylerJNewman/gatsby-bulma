@@ -76,10 +76,10 @@ const Column = ({ children }) => (
 const Midsection = () => {
   const data = useStaticQuery(productStaticQuery)
   const { allProductsJson, allWpProduct } = data
-  const productData = allProductsJson.edges.map((obj) => obj.node)
-  console.log(productData)
-  // const productData = allWpProduct.edges.map((obj) => obj.node)
+  // const productData = allProductsJson.edges.map((obj) => obj.node)
   // console.log(productData)
+  const productData = allWpProduct.edges.map((obj) => obj.node)
+  console.log(productData)
 
   return (
     <Section>
