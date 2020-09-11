@@ -5,23 +5,43 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faShoppingBag
 } from '@fortawesome/free-solid-svg-icons'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+
+const imageStaticQuery = graphql`
+  query {
+    file(relativePath: { eq: "CBlogo.png" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fixed(width: 24, height: 24) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`
 
 const Navbar = () => {
   const [isActive, setisActive] = React.useState(false)
+  const data = useStaticQuery(imageStaticQuery)
+  const { allFile } = data
+
+  console.log(allFile)
 
   return (
     <nav className='navbar'>
       <div className='container'>
         <div className='navbar-brand'>
           <a className='navbar-item' href='#' style={{ maxHeight: '38px' }}>
-            <img
+            <Img
+              fixed={data.file.childImageSharp.fixed}
               style={{
                 padding: 6,
-                maxHeight: 39,
+                maxHeight: 38,
                 display: 'block'
               }}
-              src={Logo}
-              alt='Logo'
+              alt='logo'
             />
           </a>
 
