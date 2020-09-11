@@ -1,6 +1,10 @@
 import React from 'react'
 import Logo from '../images/Ariana-Grande.png'
 import './style.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faShoppingBag
+} from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = () => {
   const [isActive, setisActive] = React.useState(false)
@@ -20,6 +24,25 @@ const Navbar = () => {
               alt='Logo'
             />
           </a>
+
+          {/* <div className='header-cart'>
+            <a
+              className='Header__summary snipcart-summary snipcart-checkout'
+              to='#'
+            >
+              <span class='icon'>
+                <i className='fas fa-cart-plus' />
+              </span>
+              hello
+              <i className='fas fa-cart-plus' />
+            </a>
+          </div> */}
+          <a className='navbar-item '>
+            <span className='icon snipcart-checkout'>
+              <FontAwesomeIcon icon={faShoppingBag} size='1x' />
+            </span>
+          </a>
+
           <a
             onClick={() => {
               setisActive(!isActive)

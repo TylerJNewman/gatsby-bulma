@@ -34,7 +34,18 @@ const ProductCard = ({ id, name, image, key, price }) => (
     {/* Product meta */}
     <div className='product-info has-text-centered'>
       <a href='product.html'>
-        <h3 className='product-name'>{name}</h3>
+        <a
+          href='/'
+          className='Product snipcart-add-item'
+          data-item-id={id}
+          data-item-price={price.slice(1)}
+          // // data-item-description='High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh.'
+          data-item-image={image.sourceUrl}
+          data-item-name={name}
+          data-item-url='/'
+        >
+          <h3 className='product-name'>{name}</h3>
+        </a>
       </a>
       <p className='product-price'>{price}</p>
     </div>

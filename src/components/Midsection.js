@@ -77,7 +77,6 @@ const Midsection = () => {
   const data = useStaticQuery(productStaticQuery)
   const { allWpProduct } = data
   const productData = allWpProduct.edges.map((obj) => obj.node)
-  console.log(productData)
 
   // demo projects from local file
   // const { allProductsJson } = data

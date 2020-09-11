@@ -21,6 +21,7 @@ module.exports = {
     siteUrl: 'https://www.cannabunny.co'
   },
   plugins: [
+    'gatsby-plugin-fontawesome-css',
     'gatsby-transformer-json',
     {
       resolve: 'gatsby-source-filesystem',
@@ -85,7 +86,14 @@ module.exports = {
         anonymize: true
       }
     },
-    'gatsby-plugin-sitemap'
+    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-snipcart',
+      options: {
+        apiKey: process.env.SNIPCART_API_KEY,
+        autopop: true
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
