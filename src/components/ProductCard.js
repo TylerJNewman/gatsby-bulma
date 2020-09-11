@@ -42,7 +42,7 @@ const ProductCard = ({ id, name, image, key, price }) => (
           // // data-item-description='High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh.'
           data-item-image={image.sourceUrl}
           data-item-name={name}
-          data-item-url='/'
+          data-item-url='https://cannabunny-store.netlify.app/'
         >
           <h3 className='product-name'>{name}</h3>
         </a>
