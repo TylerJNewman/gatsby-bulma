@@ -73,7 +73,7 @@ module.exports = {
         background_color: '#2980b9',
         theme_color: '#2980b9',
         display: 'standalone',
-        icon: 'src/images/gatsby-icon.png',
+        icon: 'src//favicon/favicon.png',
         orientation: 'portrait'
       }
     },

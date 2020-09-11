@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../images/Ariana-Grande.png'
+import Logo from '../images/CBlogo.png'
 import './style.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
