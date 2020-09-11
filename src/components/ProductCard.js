@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'gatsby-image'
 
 // const ProductCard = () => {
 //   return (
@@ -26,11 +27,14 @@ import React from 'react'
 // }
 
 const ProductCard = ({ id, name, image, key, price }) => (
-  <div className='flat-card' style={{ padding: '1em .5em 2em', maxWidth: 286 }}>
+  <div className='flat-card' style={{ padding: '1em .5em 2em', maxWidth: 286, width: '100%' }}>
     {/* Product zoomable image */}
-    <div className='image'>
-      <img src={image.sourceUrl} alt={name} style={{ maxHeight: 178 }} />
-    </div>
+    <Image
+      fluid={image.localFile.childImageSharp.fluid}
+      key={image.id}
+      alt={name}
+      imgStyle={{ height: 178 }}
+    />
     {/* Product meta */}
     <div className='product-info has-text-centered'>
       <a

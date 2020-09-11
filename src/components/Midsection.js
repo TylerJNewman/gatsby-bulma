@@ -5,20 +5,26 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 const productStaticQuery = graphql`
   {
-    allProductsJson {
-      edges {
-        node {
-          id
-          name
-          price
-          image {
-            id
-            sourceUrl
-            altText
-          }
-        }
-      }
-    }
+    # allProductsJson {
+    #   edges {
+    #     node {
+    #       id
+    #       name
+    #       price
+    #       image {
+    #         id
+    #         localFile {
+    #           childImageSharp {
+    #             fluid(maxWidth: 910) {
+    #               ...GatsbyImageSharpFluid_withWebp_tracedSVG
+    #             }
+    #           }
+    #         }
+    #         altText
+    #       }
+    #     }
+    #   }
+    # }
     allWpProduct {
       edges {
         node {
@@ -28,13 +34,25 @@ const productStaticQuery = graphql`
           shortDescription
           image {
             id
-            sourceUrl
+            localFile {
+              childImageSharp {
+                fluid(maxHeight: 178, quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                }
+              }
+            }
             altText
           }
           galleryImages {
             nodes {
               id
-              sourceUrl
+              localFile {
+                childImageSharp {
+                  fluid(maxHeight: 178, quality: 100) {
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                  }
+                }
+              }
               altText
             }
           }
